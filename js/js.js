@@ -57,7 +57,7 @@ function addPro(){
     catagory:catagory.value.toLowerCase(),
     total:showPrice.innerHTML
   };
-  if(mode=='creat')
+  if(mode == 'creat')
   {
     if( title.value!="" &&
         price.value!="" && 

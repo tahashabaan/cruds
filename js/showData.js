@@ -1,6 +1,8 @@
+
 function showData() {
   let tbody = document.getElementById("tbody");
   tbody.innerHTML = "";
+
   dataPro.forEach((val) => {
     tbody.innerHTML +=
       `
@@ -18,5 +20,6 @@ function showData() {
        <button class="btn" onclick="deleteItem(${val.id})">delete</button>
        </td>`;
   });
+  
   deleAll();
 }
