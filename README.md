@@ -1,4 +1,4 @@
-# Store products Project (apply cruds operation)
+# Store of products Project (apply cruds operation)
   in this app apply cruds operations 
   - where can I add any number of product
   - search of products by name and category
