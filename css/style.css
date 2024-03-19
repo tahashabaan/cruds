@@ -5,20 +5,23 @@
 }
 
 .pd {
-
   padding: 20px;
 }
 
- .container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin: 2rem;
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 2rem auto;
 }
 
 .cruds {
-  width: 80%;
+  width: 70%;
   background-color: rgba(0, 0, 0, 0.67);
+  border-radius: 1.4em;
+  padding: 1.4em 0.8em;
+  cursor: pointer;
+  margin: auto;
 }
 
 header {
@@ -33,6 +36,7 @@ header {
 input {
   outline: none;
   border: none;
+  /* max-width: fit-content; */
   width: 100%;
   height: 20px;
   background-color: #111;
@@ -111,21 +115,158 @@ td {
   font-weight: bold;
 }
 
-@media screen and (max-width: 550px) {
-  
-  .cruds{
+@media screen and (max-width: 600px) {
+  .cruds {
     width: 100%;
   }
 
-  .input-price{
+  .input-price {
     margin: 2rem 0rem;
     gap: 0.4rem;
     flex-direction: column;
   }
-
-
-
-  table thead:nth-child(5) {
-    display: none;
+  table th,
+  td {
+    font-weight: normal;
+    word-spacing: 0px;
   }
+
+  /* table thead tr :nth-child(5),
+  table thead tr :nth-child(6),
+  table thead tr :nth-child(7) {
+    display: none;
+  } */
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  td::before {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: fit-content;
+    color: #111111;
+    font-size: 16px;
+  }
+
+  td:nth-of-type(1)::before {
+    content: "id";
+  }
+  td:nth-of-type(2)::before {
+    content: "title";
+  }
+  td:nth-of-type(3)::before {
+    content: "category";
+  }
+  td:nth-of-type(4)::before {
+    content: "price";
+  }
+  td:nth-of-type(5)::before {
+    content: "taxes";
+  }
+  td:nth-of-type(6)::before {
+    content: "ads";
+  }
+  td:nth-of-type(7)::before {
+    content: "discount";
+  }
+  td:nth-of-type(8)::before {
+    content: "total";
+  }
+  td:nth-of-type(9)::before {
+    content: "update";
+  }
+  td:nth-of-type(10)::before {
+    content: "delete";
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  /* thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    Behave  like a "row"
+    border: none;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2px;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    Now like a table header
+    position: absolute;
+    Top/left values mimic padding
+    top: 0px;
+    left: 6px;
+    width: fit-content;
+    padding-right: 10px;
+    white-space: nowrap;
+    color: #111111;
+    font-size: 16px;
+  }
+
+  
+	Label the data
+	
+  td:nth-of-type(1):before {
+    content: "id";
+  }
+  td:nth-of-type(2):before {
+    content: "title";
+  }
+  td:nth-of-type(3):before {
+    content: "category";
+  }
+  td:nth-of-type(4):before {
+    content: "price";
+  }
+  td:nth-of-type(5):before {
+    content: "taxes?";
+  }
+  td:nth-of-type(6):before {
+    content: "ads";
+  }
+  td:nth-of-type(7):before {
+    content: "discount";
+  }
+  td:nth-of-type(8):before {
+    content: "total";
+  }
+  td:nth-of-type(9):before {
+    content: "update";
+  }
+  td:nth-of-type(10):before {
+    content: "delete";
+  } */
 }

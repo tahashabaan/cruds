@@ -1,73 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cruds project</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="container">
-     <section class="cruds">
-         <header>
-           <h2 class="head-title">cruds</h2>
-           <p class="head-des">cruds description</p>
-         </header>
-         <main>
-           <section class="input-cruds pd">
-               <input type="text" id="title"     placeholder="title">
-               <div class="input-price">
-                 <input type="number" placeholder="price" id="price" onkeyup="getTotal()">
-                 <input type="number" placeholder="taxos" id="taxos" onkeyup="getTotal()">
-                 <input type="number" placeholder="ads" id="ads" onkeyup="getTotal()">
-                 <input type="number" placeholder="discount" id="discount" onkeyup="getTotal()">
-                  <span id="show-price"></span>
-               </div><!-- ./price -->
-               <input type="number" placeholder="count" id="count">
-               <input type="text" placeholder="catagory" id="catagory">
-               <button class="btn" id="btn">creat</button>
-           </section><!-- ./input-cruds -->
-         </main>
-         <footer>
-              <div class="search-box pd">
-                <input  onkeyup="searchData(this.value)" 
-                onkeypress="searchData(this.value)" type="text" id="search" placeholder="search">
-                <div class="btn-search">
-                  <button onclick="getSearchMode(this.id)" class="btn" id="search-cat">
-                    search by category
-                  </button>
-                  <button onclick="getSearchMode(this.id)" class="btn" id="search-title">
-                    search by title
-                  </button>
-                </div><!--./btn-search-->
-              </div><!--./search-box -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cruds project</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="cruds">
+        <header>
+          <h2 class="head-title">cruds</h2>
+          <p class="head-des">cruds description</p>
+        </header>
+        <main>
+          <section class="input-cruds pd">
+            <input type="text" id="title" placeholder="title" />
+            <div class="input-price">
+              <input
+                type="number"
+                placeholder="price"
+                id="price"
+                onkeyup="getTotal()"
+              />
+              <input
+                type="number"
+                placeholder="taxos"
+                id="taxos"
+                onkeyup="getTotal()"
+              />
+              <input
+                type="number"
+                placeholder="ads"
+                id="ads"
+                onkeyup="getTotal()"
+              />
+              <input
+                type="number"
+                placeholder="discount"
+                id="discount"
+                onkeyup="getTotal()"
+              />
+              <span id="show-price"></span>
+            </div>
+            <!-- ./price -->
+            <input type="number" placeholder="count" id="count" />
+            <input type="text" placeholder="catagory" id="catagory" />
+            <button class="btn" id="btn">creat</button>
+          </section>
+          <!-- ./input-cruds -->
+        </main>
+        <footer>
+          <div class="search-box pd">
+            <input
+              onkeyup="searchData(this.value)"
+              onkeypress="searchData(this.value)"
+              type="text"
+              id="search"
+              placeholder="search"
+            />
+            <div class="btn-search">
+              <button
+                onclick="getSearchMode(this.id)"
+                class="btn"
+                id="search-cat"
+              >
+                search by category
+              </button>
+              <button
+                onclick="getSearchMode(this.id)"
+                class="btn"
+                id="search-title"
+              >
+                search by title
+              </button>
+            </div>
+            <!--./btn-search-->
+          </div>
+          <!--./search-box -->
 
-               <div class="btn-del" id="btn-del">
-    
-               </div>
-               
-              <table>
-                <thead>
-                <tr>
-                  <th>id</th>
-                  <th>title</th>
-                  <th>category</th>
-                  <th>price</th>
-                  <th>taxes</th>
-                  <th>ads</th>
-                  <th>discount</th>
-                  <th>total</th>
-                  <th>update</th>
-                  <th>delete</th>
-                </tr>
-              </thead>
-              <tbody id="tbody">
-              </tbody>
-              </table>
-         </footer>
-     </section>
+          <div class="btn-del" id="btn-del"></div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>category</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>update</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </footer>
+      </section>
     </div>
     <script src="js/js.js"></script>
-</body>
+  </body>
 </html>
